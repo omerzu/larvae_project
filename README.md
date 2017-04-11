@@ -16,7 +16,7 @@ The suggested structrue is to have a directory for each sequnced sample.
 3. Building initial sample summay:
    * `ls */*.pipe.blast.parsed.final > pipe.blast.parsed.files`
    * count total number of reads (using grep -c for example) in each sample and save in to all.reads.cnt file
-   * `perl scripts/createInitialReportMultipleFilesWithFishSummary.pl pipe.blast.parsed.files files/initial_morph_data.txt dirs files/sampleNameToLarvaeNumber.txt files/GOA.txt  files/RS.txt` 
+   * `perl scripts/createInitialReport.pl pipe.blast.parsed.files files/initial_morph_data.txt dirs files/sampleNameToLarvaeNumber.txt files/GOA.txt  files/RS.txt` 
    *  **NOTE:** This script was initially used to summarize the parsed data for easy comparison with the initial morphological data.
     The script also added initial annotation of Red Sea and Gulf species (using RS.txt and GOA.txt respectively), the species list were manually curated later so those files may contain partial and inaccurate data.
  4. combine the files from the previous step: `for f in $(cat dirs);do cat $f/$f*.out >>pipe.initial.report.csv;done;`
