@@ -1,7 +1,7 @@
 use strict;
 use constant COIMAP => " files/cois_mapping.txt"; # CSV that maps COI name to taxonomic group
 use constant COILEN => " files/db.len"; # map each COI to it's sequence length
-use constant PARSESCRPIT => " scripts/parseBlastResults.pl";
+use constant PARSESCRPIT => " perl scripts/parseBlastResults.pl";
 use constant isCOIREADS => 1;
 use constant DATA_SUFFIX => ".final";
 use constant SUBMIT_JOB => "bsub -q sorek"; 
